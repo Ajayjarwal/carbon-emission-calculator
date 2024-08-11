@@ -1,0 +1,65 @@
+<div class="video-background">
+  <video autoplay muted loop id="background-video" class="main-video">
+    <source src="../../../assets/images/video_2.mp4" type="video/mp4">
+  </video>
+
+  <div class="centered-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="form-container">
+            <h2 class="text-center mb-4">Household Emissions</h2>
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="electricity">Electricity (KWh) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="electricity" name="electricity"
+                       placeholder="Enter units used" [(ngModel)]="houseHDetails.electricity" required />
+              </div>
+
+              <div class="form-group">
+                <label for="lpg">LPG (kg) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="lpg" name="lpg" placeholder="Enter lpg used"
+                       [(ngModel)]="houseHDetails.lpg" required />
+              </div>
+
+              <div class="form-group">
+                <label for="naturalGas">Natural Gas (m <sup>3</sup>) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="naturalGas" name="naturalGas"
+                       placeholder="Enter natural gas used" [(ngModel)]="houseHDetails.naturalGas" required />
+              </div>
+
+              <div class="form-group">
+                <label for="heatOil">Heat Oil (Lt.) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="heatOil" name="heatOil" placeholder="Enter heat oil used"
+                       [(ngModel)]="houseHDetails.heatOil" required />
+              </div>
+
+              <div class="form-group">
+                <label for="coal">Coal (kg) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="coal" name="coal" placeholder="Enter coal used"
+                       [(ngModel)]="houseHDetails.coal" required />
+              </div>
+
+              <div class="form-group">
+                <label for="propane">Propane (kg) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="propane" name="propane" placeholder="Enter propane used"
+                       [(ngModel)]="houseHDetails.propane" required />
+              </div>
+
+              <div class="form-group">
+                <label for="woodenPallets">Wooden Pallets (kg) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="woodenPallets" name="woodenPallets"
+                       placeholder="Enter wood used" [(ngModel)]="houseHDetails.woodenPallets" required />
+              </div>
+
+              <div class="form-group button">
+
+                <button type="button" class="btn btn-outline-success prev-btn" (click)="goBack()">Previous</button>
+                <button type="submit" class="btn btn-outline-success btn-block">Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

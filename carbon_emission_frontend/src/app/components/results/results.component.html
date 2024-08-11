@@ -1,0 +1,54 @@
+<div class="video-background">
+    <video autoplay muted loop id="background-video" class="main-video">
+      <source src="../../../assets/images/video_2.mp4" type="video/mp4">
+    </video>
+  
+    <div class="centered-container">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="form-container">
+              <h2 class="text-center mb-4">Emission Details</h2>
+              <form (ngSubmit)="goHome()">
+  
+                <div class="form-group">
+                    <label>Emission By House-hold:</label>
+                    <p class="form-control">{{emissions.houseHoldEmission}} Kg CO2</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Emission By Car-Usage:</label>
+                    <p class="form-control">{{emissions.carEmission}} Kg CO2</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Emission By Motor-Bike Usage:</label>
+                    <p class="form-control">{{emissions.bikeEmission}} Kg CO2</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Emission By Travelling:</label>
+                    <p class="form-control">{{emissions.travellingEmission}} Kg CO2</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Emission By Waste:</label>
+                    <p class="form-control">{{emissions.wasteEmission}} Kg CO2</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Emission By Offsets:</label>
+                    <p class="form-control">{{emissions.offsetsEmission}} Kg CO2</p>
+                </div>
+  
+    
+                <div class="form-group button">
+                  <button type="submit" class="btn btn-outline-success btn-block">Go Home</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  

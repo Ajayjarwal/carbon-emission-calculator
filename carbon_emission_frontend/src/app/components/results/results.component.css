@@ -1,0 +1,103 @@
+/* Centering container with Flexbox */
+@font-face {
+    font-family: kailsix;
+    src: url('../../../assets/fonts/kailsix-regular.otf');
+  }
+
+.main-video{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100%;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+/* Styling the form container */
+.form-container {
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    width: 500px;
+}
+
+.required{
+    color: red;
+}
+
+.form-group{
+    /* margin: auto; */
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    color: white;
+}
+
+.btn{
+    width: 30%;
+    margin-left: 30%;
+}
+
+.prev-btn{
+    margin-left: 60px;
+}
+
+.text-center{
+    /* font-family: "Gupter", serif; */
+    font-family: kailsix;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+
+::placeholder{
+    color: rgb(174, 177, 180);
+
+}
+
+.form-control:focus{
+    border-color: #28a745; /* Border color when focused */
+    box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25); /* Box shadow when focused */
+}
+
+.form-control{
+    display: inline-block ;
+    width: 250px;
+}
+
+.footer{
+  bottom:0px
+}
+
+label {
+    /* display: inline-block; */
+    width: 200px;
+    /* text-align: center; */
+}
+
+input{
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+    width: 300px;
+}
+
+.form-select{
+    display: inline-block ;
+    width: 250px;
+}
+
+.form-calculate{
+    margin-bottom: 20px;
+}

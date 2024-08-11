@@ -1,0 +1,37 @@
+<div class="video-background">
+  <video autoplay muted loop id="background-video" class="main-video">
+    <source src="../../../assets/images/video_2.mp4" type="video/mp4">
+  </video>
+
+  <div class="centered-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="form-container">
+            <h2 class="text-center mb-4">Waste</h2>
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="householdResidue">Household Residue (kg)<span class="required">*</span></label>
+                <input type="number" class="form-control" id="householdResidue" name="householdResidue" [(ngModel)]="wasteDetails.houseHoldResidue" required/>
+              </div>
+
+              <div class="form-group">
+                <label for="foodDrinks">Food & Drinks (kg)<span class="required">*</span></label>
+                <input type="number" class="form-control" id="foodDrinks" name="foodDrinks" [(ngModel)]="wasteDetails.foodAndDrink" required/>
+              </div>
+
+              <div class="form-group">
+                <label for="gardenResidue">Garden Residue (kg)</label>
+                <input type="number" class="form-control" id="gardenResidue" name="gardenResidue" [(ngModel)]="wasteDetails.gardenResidue" />
+              </div>
+
+              <div class="form-group button">
+                <button type="button" class="btn btn-outline-success btn-block" (click)="goBack()">Previous</button>
+                <button type="submit" class="btn btn-outline-success btn-block">Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

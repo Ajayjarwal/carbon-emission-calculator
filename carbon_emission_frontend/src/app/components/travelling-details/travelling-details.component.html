@@ -1,0 +1,49 @@
+<div class="video-background">
+  <video autoplay muted loop id="background-video" class="main-video">
+    <source src="../../../assets/images/video_2.mp4" type="video/mp4">
+  </video>
+
+  <div class="centered-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="form-container">
+            <h2 class="text-center mb-4">Travelling</h2>
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="distanceByRailway">Distance Travelled by Railways (km) <span
+                  class="required">*</span></label>
+                <input type="number" class="form-control" id="distanceByRailway" name="distanceByRailway" [(ngModel)]="travellingDetails.travellingByRailway" required />
+              </div>
+
+              <div class="form-group">
+                <label for="distanceByBus">Distance Travelled by Bus (km) <span
+                  class="required">*</span></label>
+                <input type="number" class="form-control" id="distanceByBus" name="distanceByBus" [(ngModel)]="travellingDetails.travellingByBus" required />
+              </div>
+
+              <div class="form-group">
+                <label for="distanceByTaxi">Distance Travelled by Taxi (km) <span
+                  class="required">*</span></label>
+                <input type="number" class="form-control" id="distanceByTaxi" name="distanceByTaxi" [(ngModel)]="travellingDetails.travellingByTaxi" required />
+              </div>
+
+              <div class="form-group">
+                <label for="distanceByFlight">Distance Travelled by Flight (km) <span
+                  class="required">*</span></label>
+
+                <input type="number" class="form-control" id="distanceByFlight" name="distanceByFlight" [(ngModel)]="travellingDetails.travellingByFlight" required />
+              </div>
+              <div class="form-calculate">
+                <a href="https://www.distance.to" target="_blank">Click to calculate flight distance</a>
+              </div>
+              <div class="form-group button">
+                <button type="button" class="btn btn-outline-success btn-block" (click)="goBack()">Previous</button>
+                <button type="submit" class="btn btn-outline-success btn-block">Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

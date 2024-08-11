@@ -1,0 +1,75 @@
+<div class="video-background">
+  <video autoplay muted loop id="background-video" class="main-video">
+    <source src="../../../assets/images/video_2.mp4" type="video/mp4">
+  </video>
+
+
+  <div class="centered-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="form-container">
+            <h2 class="text-center mb-4">Car Usage</h2>
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="milage">Mileage (km) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="milage" name="milage" placeholder="Enter mileage" [(ngModel)]="carDetails.milage" required/>
+              </div>
+
+              <div class="form-group">
+                <label for="carType" class="form-label" >Car Type <span class="required">*</span></label>
+                <select class="form-select" id="carType" name="carType" [(ngModel)]="carDetails.carType" required>
+                  <option value="" disabled selected >Select a type</option>
+                  <option value="Sedan" class="options">Sedan</option>
+                  <option value="SUV" class="options">SUV</option>
+                  <option value="Hatchback" class="options">Hatchback</option>
+                  <option value="Commercial Vehicle" class="options">Commercial Vehicle</option>
+
+
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="fuelType" class="form-label" >Fuel Type <span class="required">*</span></label>
+                <select class="form-select" id="fuelType" name="fuelType" [(ngModel)]="carDetails.fuelType" required>
+                  <option value="" disabled selected class="drop">Select a type</option>
+                  <option value="Petrol">Petrol</option>
+                  <option value="Diesel">Diesel</option>
+                  <option value="CNG">CNG</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Electric">Electric</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="engineSize" class="form-label" >Engine Size <span class="required">*</span></label>
+                <select class="form-select" id="engineSize" name="engineSize" [(ngModel)]="engS" required>
+                  <option value="" disabled selected class="drop">Select a size</option>
+                  <option value="1.5">Less than 1.5L</option>
+                  <option value="2">1.5L to 2.0L</option>
+                  <option value="3">2.0L to 3.0L</option>
+                  <option value="4">more than 3.0L</option>
+                  <option value="0">Electric</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="carAge">Car Age <span class="required">*</span></label>
+                <input type="number" class="form-control" id="carAge" name="carAge" placeholder="Enter car age (yrs)" [(ngModel)]="carDetails.carAge" required />
+              </div>
+
+              <div class="form-group">
+                <label for="usagePerMonth">Usage per month <span class="required">*</span></label>
+                <input type="number" class="form-control" id="usagePerMonth" name="usagePerMonth" placeholder="Enter usage (km)" [(ngModel)]="carDetails.usagePerMonth" required/>
+              </div>
+
+              <div class="form-group button">
+                <button type="button" class="btn btn-outline-success btn-block" (click)="goBack()">Previous</button>
+                <button type="submit" class="btn btn-outline-success btn-block">Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

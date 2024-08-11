@@ -1,0 +1,45 @@
+<div class="video-background">
+  <video autoplay muted loop id="background-video" class="main-video">
+    <source src="../../../assets/images/video_2.mp4" type="video/mp4">
+  </video>
+
+  <div class="centered-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="form-container">
+            <h2 class="text-center mb-4">User Details</h2>
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="country">Country Name <span class="required">*</span></label>
+                <input type="text" class="form-control" id="country" name="country"
+                       placeholder="Enter Country Name" required [(ngModel)]="details.country">
+              </div>
+
+              <div class="form-group">
+                <label for="familyMembers">Family Members <span class="required">*</span></label>
+                <input type="number" class="form-control" id="familyMembers" name="familyMembers"
+                       placeholder="Enter Family Members" required [(ngModel)]="details.family_members">
+              </div>
+
+              <div class="form-group">
+                <label for="startYear">Starting Year <span class="required">*</span></label>
+                <input type="number" class="form-control" id="startYear" name="startYear"
+                       placeholder="Enter starting year" step="1" required [(ngModel)]="details.start_year">
+              </div>
+
+              <div class="form-group">
+                <label for="endYear">Ending Year <span class="required">*</span></label>
+                <input type="number" class="form-control" id="endYear" name="endYear"
+                       placeholder="Enter ending year" step="1" required [(ngModel)]="details.end_year">
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-outline-success btn-block">Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

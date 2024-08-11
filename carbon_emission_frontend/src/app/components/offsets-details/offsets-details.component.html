@@ -1,0 +1,43 @@
+<div class="video-background">
+  <video autoplay muted loop id="background-video" class="main-video">
+    <source src="../../../assets/images/video_2.mp4" type="video/mp4">
+  </video>
+
+  <div class="centered-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="form-container">
+            <h2 class="text-center mb-4">Offsets</h2>
+            <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="noOfTrees">No. of Tress in facility <span class="required">*</span></label>
+                <input type="number" class="form-control" id="noOfTrees" name="noOfTrees" [(ngModel)]="offsetsDetails.numOfTrees" required/>
+              </div>
+
+              <div class="form-group">
+                <label for="areaSoil">Area covered under soil (m<sup>3</sup>) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="areaSoil" name="areaSoil" [(ngModel)]="offsetsDetails.areaUnderSoil" required/>
+              </div>
+
+              <div class="form-group">
+                <label for="areaGrass">Area covered under Grass (m<sup>3</sup>) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="areaGrass" name="areaGrass" [(ngModel)]="offsetsDetails.getAreaUnderGrass" required/>
+              </div>
+
+              <div class="form-group">
+                <label for="areaWater">Area covered under Water (m<sup>3</sup>) <span class="required">*</span></label>
+                <input type="number" class="form-control" id="areaWater" name="areaWater" [(ngModel)]="offsetsDetails.getAreaUnderWater" required/>
+              </div>
+
+              <div class="form-group button">
+
+                <button type="button" class="btn btn-outline-success prev-btn" (click)="goBack()">Previous</button>
+                <button type="submit" class="btn btn-outline-success btn-block">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
