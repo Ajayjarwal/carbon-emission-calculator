@@ -29,7 +29,7 @@ export class MotorBikeUsagedetailsComponent implements OnInit {
 
   onSubmit(): void {
       this.bikeDetails.engineSize = Number(this.engS);
-      if(this.bikeDetails && this.bikeDetails.milage && this.bikeDetails.engineType && this.bikeDetails.engineSize && this.bikeDetails.bikeAge && this.bikeDetails.usagePerMonth){
+      if(this.bikeDetails && this.bikeDetails.milage && this.bikeDetails.engineType && this.bikeDetails.engineSize && this.bikeDetails.bikeAge != undefined && this.bikeDetails.usagePerMonth != undefined){
         if(this.bikeDetails.milage < 0){
           alert("Enter value > 0")
         } else if(this.bikeDetails.bikeAge < 0){

@@ -28,7 +28,9 @@ export class HouseholdEmissionDetailsComponent implements OnInit {
   onSubmit(): void {
     if (this.houseHDetails) this.addService.addHhDetails(this.houseHDetails);
 
-    if (this.houseHDetails && this.houseHDetails.electricity && this.houseHDetails.lpg && this.houseHDetails.naturalGas && this.houseHDetails.heatOil && this.houseHDetails.coal && this.houseHDetails.propane && this.houseHDetails.woodenPallets) {
+    if (this.houseHDetails && this.houseHDetails.electricity != undefined && this.houseHDetails.lpg != undefined && this.houseHDetails.naturalGas != undefined
+       && this.houseHDetails.heatOil != undefined && this.houseHDetails.coal != undefined && this.houseHDetails.propane != undefined
+        && this.houseHDetails.woodenPallets != undefined) {
       if (this.houseHDetails.electricity < 0) {
         alert("Enter value >=0")
       } else if (this.houseHDetails.lpg < 0) {

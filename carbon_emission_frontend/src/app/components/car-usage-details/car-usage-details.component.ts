@@ -32,7 +32,8 @@ export class CarUsageDetailsComponent implements OnInit{
 
   onSubmit(): void {
       this.carDetails.engineSize = Number(this.engS);
-      if(this.carDetails && this.carDetails.milage && this.carDetails.carType && this.carDetails.fuelType && this.carDetails.engineSize && this.carDetails.carAge && this.carDetails.usagePerMonth){
+      if(this.carDetails && this.carDetails.milage && this.carDetails.carType && this.carDetails.fuelType && 
+        this.carDetails.engineSize && this.carDetails.carAge != undefined && this.carDetails.usagePerMonth != undefined){
         if (this.carDetails.milage < 0){
           alert("Enter value > 0")
         } else if(this.carDetails.carAge < 0){

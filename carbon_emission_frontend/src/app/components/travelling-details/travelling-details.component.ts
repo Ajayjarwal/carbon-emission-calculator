@@ -25,7 +25,8 @@ export class TravellingDetailsComponent implements OnInit {
 
   onSubmit(): void {
     if(this.travellingDetails)this.addService.addTravellingDetails(this.travellingDetails)
-    if(this.travellingDetails && this.travellingDetails.travellingByBus && this.travellingDetails.travellingByTaxi && this.travellingDetails.travellingByRailway && this.travellingDetails.travellingByFlight){
+    if(this.travellingDetails && this.travellingDetails.travellingByBus != undefined && this.travellingDetails.travellingByTaxi != undefined
+       && this.travellingDetails.travellingByRailway != undefined && this.travellingDetails.travellingByFlight != undefined){
       if(this.travellingDetails.travellingByBus < 0){
         alert("Enter value >= 0")
       } else if(this.travellingDetails.travellingByTaxi < 0){
@@ -40,6 +41,7 @@ export class TravellingDetailsComponent implements OnInit {
         this.router.navigate(['/waste-details']);
       }
     }else{
+      console.log(this.travellingDetails);
       alert("Please fill all required filled");
     }
   }

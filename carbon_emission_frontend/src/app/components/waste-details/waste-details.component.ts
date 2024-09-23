@@ -26,7 +26,7 @@ export class WasteDetailsComponent implements OnInit {
     // if(this.wasteDetails.gardenResidue < 0){
     //   alert("Enter value >=0")
     // }
-    if (this.wasteDetails && this.wasteDetails.houseHoldResidue && this.wasteDetails.foodAndDrink) {
+    if (this.wasteDetails && this.wasteDetails.houseHoldResidue != undefined && this.wasteDetails.foodAndDrink != undefined) {
       if (this.wasteDetails.houseHoldResidue < 0) {
         alert("Enter value >= 0")
       } else if (this.wasteDetails.foodAndDrink < 0) {

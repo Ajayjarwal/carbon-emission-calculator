@@ -23,7 +23,7 @@ export class OffsetsDetailsComponent implements OnInit {
 
   onSubmit(): void {
     if (this.offsetsDetails) this.addService.addOffsetsDetails(this.offsetsDetails)
-    if (this.offsetsDetails && this.offsetsDetails.numOfTrees && this.offsetsDetails.areaUnderSoil && this.offsetsDetails.getAreaUnderWater && this.offsetsDetails.getAreaUnderGrass) {
+    if (this.offsetsDetails && this.offsetsDetails.numOfTrees != undefined && this.offsetsDetails.areaUnderSoil != undefined && this.offsetsDetails.getAreaUnderWater != undefined && this.offsetsDetails.getAreaUnderGrass != undefined) {
       if (this.offsetsDetails.numOfTrees < 0) {
         alert("Enter value > 0")
       } else if (this.offsetsDetails.areaUnderSoil < 0) {
